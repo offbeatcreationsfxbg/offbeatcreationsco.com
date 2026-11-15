@@ -18,7 +18,7 @@ $('sandboxCheckout').addEventListener('click',async()=>{
   const response=await fetch('https://stkhsfxtmeeiepxnzgym.supabase.co/functions/v1/square-sandbox-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:cart.map(c=>({variation_id:c.id,quantity:c.qty}))})});
   const data=await response.json();
   if(!response.ok||data.environment!=='sandbox'||!data.checkout_url)throw Error(data.error+(data.square_code?' ('+data.square_code+')':'')||'Checkout unavailable');
-  const url=new URL(data.checkout_url);if(url.protocol!=='https:'||!['square.link','checkout.square.site'].includes(url.hostname))throw Error('Unexpected Square checkout URL');
+  const url=new URL(data.checkout_url);if(url.protocol!=='https:'||!(['square.link','square.site','squareupsandbox.com'].some(domain=>url.hostname===domain||url.hostname.endsWith('.'+domain))))throw Error('Unexpected Square checkout URL');
   status.textContent='Opening Square Sandbox checkout…';location.assign(url.href);
  }catch(error){status.textContent='Checkout could not be created: '+error.message;button.disabled=false;}
 });
