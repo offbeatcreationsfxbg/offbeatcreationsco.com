@@ -1,3 +1,5 @@
+import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.57.0';
+const authClient=createClient('https://stkhsfxtmeeiepxnzgym.supabase.co','sb_publishable_FKxLA2wuSeEauCYWFx3vJA_mjJ7Az6X');
 const ENDPOINT='https://stkhsfxtmeeiepxnzgym.supabase.co/functions/v1/square-sandbox-catalog';
 const $=id=>document.getElementById(id);const money=(c,currency='USD')=>new Intl.NumberFormat('en-US',{style:'currency',currency}).format(c/100);
 let products=[],cart=[];const cartKey='offbeat-square-sandbox-cart-v1';
@@ -15,7 +17,10 @@ $('sandboxCheckout').addEventListener('click',async()=>{
  if(!confirm('Continue to Square SANDBOX checkout? This creates a test order only; no real payments will be processed.'))return;
  const button=$('sandboxCheckout'),status=$('checkoutStatus');button.disabled=true;status.textContent='Creating secure Square Sandbox checkout…';
  try{
-  const response=await fetch('https://stkhsfxtmeeiepxnzgym.supabase.co/functions/v1/square-sandbox-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:cart.map(c=>({variation_id:c.id,quantity:c.qty}))})});
+  const {data:{session}}=await authClient.auth.getSession();
+  const headers={'Content-Type':'application/json'};
+  if(session?.access_token)headers.Authorization='Bearer '+session.access_token;
+  const response=await fetch('https://stkhsfxtmeeiepxnzgym.supabase.co/functions/v1/square-sandbox-checkout',{method:'POST',headers,body:JSON.stringify({items:cart.map(c=>({variation_id:c.id,quantity:c.qty}))})});
   const data=await response.json();
   if(!response.ok||data.environment!=='sandbox'||!data.checkout_url)throw Error(data.error+(data.square_code?' ('+data.square_code+')':'')||'Checkout unavailable');
   const url=new URL(data.checkout_url);if(url.protocol!=='https:'||!(['square.link','square.site','squareupsandbox.com'].some(domain=>url.hostname===domain||url.hostname.endsWith('.'+domain))))throw Error('Unexpected Square checkout URL');
