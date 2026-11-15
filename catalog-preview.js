@@ -22,4 +22,4 @@ async function load(){const {data:{user}}=await db.auth.getUser();let isAdmin=fa
 load();
 drawCart();
 
-async function loadShippingRate(){try{const {data,error}=await db.from('offbeat_store_settings').select('flat_shipping_cents').eq('id',1).single();if(!error&&data){shippingRate=data.flat_shipping_cents;drawCart();}}catch{}}// The server always determines the authoritative shipping charge.
+async function loadShippingRate(){try{const response=await fetch('https://stkhsfxtmeeiepxnzgym.supabase.co/functions/v1/catalog-sandbox-checkout',{headers:{'apikey':'sb_publishable_FKxLA2wuSeEauCYWFx3vJA_mjJ7Az6X'}});if(response.ok){const data=await response.json();shippingRate=data.flat_shipping_cents;drawCart();document.querySelector('input[value="shipping"]').parentElement.lastChild.textContent=' Standard shipping — '+money(shippingRate)+' flat rate';}}catch{}}loadShippingRate();
