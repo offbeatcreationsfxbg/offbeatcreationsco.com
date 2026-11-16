@@ -91,3 +91,64 @@ body.offbeat-public{--bg:#f8f5f0;--panel:#fffdf9;--cream:#302a28;--orange:#b75c3
 .offbeat-public .product-preview input,.offbeat-public .product-preview select,.offbeat-public .delivery-fields input{background:#fbf9f6;color:#312924;border-color:#d8cbbf}
 @media(max-width:900px){.offbeat-home .hero-inner{grid-template-columns:1fr;min-height:0}.offbeat-home .hero-logo img{width:min(65%,280px)}}
 @media(max-width:650px){.offbeat-public .top nav{background:#fffdfa;border-bottom:1px solid #e8ded4}.offbeat-home .hero-inner{padding:32px 5% 55px}.offbeat-home .hero h1{font-size:43px}.offbeat-home .hero-logo{padding:0}.offbeat-home .product{min-height:170px}.offbeat-home .products,.offbeat-home .gallery{padding-top:60px;padding-bottom:60px}}
+
+
+/* Brand refinement: original charcoal/orange workshop character, cleaner and more welcoming. */
+body.offbeat-public{--bg:#151514;--panel:#211f1c;--cream:#f3e9d7;--orange:#e97722;--muted:#bdb4a7;background:#191817;color:#f3e9d7}
+.offbeat-public .top{background:rgba(20,19,18,.97);border-bottom:1px solid #7a4930;box-shadow:0 3px 18px #0005}
+.offbeat-public .top nav a,.offbeat-public .category-nav a,.offbeat-public .shop-nav a,.offbeat-public .dv-nav a{color:#f2e8dc}
+.offbeat-public .top nav a:hover,.offbeat-public .category-nav a:hover{color:#f7a66b}
+.offbeat-public .menu{color:#f3e9d7}
+.offbeat-public .eyebrow{color:#f39b58}
+.offbeat-public .btn{background:#e97722;color:#1c1713}
+.offbeat-public .btn:hover{background:#ff9c50}
+.offbeat-home .hero{background-image:linear-gradient(90deg,rgba(17,16,15,.87) 0%,rgba(25,22,20,.83) 45%,rgba(24,21,19,.75) 100%),url("assets/workshop-hero.webp");background-color:#201c19;background-size:cover;background-position:center 57%}
+.offbeat-home .hero-logo{background:radial-gradient(circle,#2b2521cc 8%,#201b18aa 59%,transparent 73%)}
+.offbeat-home .hero-logo img{filter:drop-shadow(0 12px 18px #0009)}
+.offbeat-home .hero h1{color:#f6ede1;text-shadow:0 2px 20px #0006}
+.offbeat-home .hero h1 em,.offbeat-home .about em{color:#f19a5d}
+.offbeat-home .hero-sub{color:#e4d6c9}
+.offbeat-home .hero-copy a:not(.btn){color:#f5d3b9!important;text-decoration-color:#f5d3b9!important}
+.offbeat-home .products,.offbeat-home .gallery{background:#1c1a18}
+.offbeat-home .section-head p:not(.eyebrow){color:#c6b7aa}
+.offbeat-home .product{background:linear-gradient(145deg,#302923,#221e1b);border-color:#674b3b;box-shadow:0 10px 30px #0003}
+.offbeat-home .product:hover{border-color:#e97722}
+.offbeat-home .product h3{color:#f6ede1}
+.offbeat-home .product p{color:#cdbfb2}
+.offbeat-home .custom{background:#28221e}
+.offbeat-home .custom-intro>p:not(.eyebrow),.offbeat-home .steps{color:#e1d2c5}
+.offbeat-home .quote-form{background:#211d1a;border-color:#70503b;box-shadow:0 14px 40px #0003}
+.offbeat-home .quote-form label{color:#f0e4d7}
+.offbeat-home .quote-form input,.offbeat-home .quote-form select,.offbeat-home .quote-form textarea{background:#302923;color:#fff8ef;border-color:#775d4b}
+.offbeat-home .form-note{color:#c6b7aa}
+.offbeat-home .gallery-placeholder{background:linear-gradient(145deg,#342a24,#241f1c);border-color:#6b5040;color:#f3e9d7}
+.offbeat-home .gallery-placeholder small{color:#c6b7aa}
+.offbeat-home .about{background:#e9dfcf;color:#2d241f}
+.offbeat-home .about em{color:#b85b2d}
+.offbeat-home .contact{background:#211d1a;color:#f3e9d7}
+.offbeat-home .contact p:not(.eyebrow){color:#cbbdaf}
+.offbeat-public footer{background:#10100f;color:#cfc1b3}
+.offbeat-public footer strong{color:#f0a56b}
+.offbeat-public .category-main,.offbeat-public .catalog-wrap{color:#f3e9d7}
+.offbeat-public .category-card,.offbeat-public .dv-card{background:linear-gradient(145deg,#302923,#211e1b);border-color:#73503b;box-shadow:0 12px 35px #0002}
+.offbeat-public .category-card:hover,.offbeat-public .dv-card:hover{border-color:#e97722}
+.offbeat-public .category-card p,.offbeat-public .intro,.offbeat-public .dv-lead,.offbeat-public .dv-card p{color:#d1c2b4}
+.offbeat-public .category-action,.offbeat-public .dv-crumb,.offbeat-public .dv-card button{color:#ffae73}
+.offbeat-public .category-note{background:#2d241f;color:#ead8c7;border-left-color:#e97722}
+.offbeat-public .dv-card h2,.offbeat-public .dv-main label{color:#f4e9dd}
+.offbeat-public .dv-main h1 em{color:#f19a5d}
+.offbeat-public .category-buttons button{background:#302720;border-color:#76513a;color:#f5e9db}
+.offbeat-public .category-buttons button:hover,.offbeat-public .category-buttons button[aria-pressed="true"]{background:#583821;border-color:#e97722}
+.offbeat-public .category-buttons small{color:#d4c0ad}
+.offbeat-public .product-tile,.offbeat-public .product-preview{background:#27211d;border-color:#76513a;color:#f5e9db}
+.offbeat-public .product-tile-button{color:#f5e9db}
+.offbeat-public .tile-media,.offbeat-public .shirt-visual{background:#382e28;border-color:#775744}
+.offbeat-public .tile-price,.offbeat-public .preview-price,.offbeat-public .tile-view{color:#ffae73}
+.offbeat-public .product-dialog{background:#27211d;color:#f5e9db;border-color:#a56c43}
+.offbeat-public .dialog-close{background:#3c2e25;color:#f5e9db;border-color:#8a654d}
+.offbeat-public .product-description{color:#e1d1c1}
+.offbeat-public .product-description h3{color:#fff4e9}
+.offbeat-public .muted-note{color:#d2c1b1}
+.offbeat-public .catalog-banner{background:#49301f;border-color:#b9793d;color:#f6ddc6}
+.offbeat-public .product-preview input,.offbeat-public .product-preview select,.offbeat-public .delivery-fields input{background:#1a1715;color:#fff4e9;border-color:#876249}
+@media(max-width:650px){.offbeat-public .top nav{background:#1b1917;border-color:#70503b}.offbeat-home .hero{background-position:58% center;background-image:linear-gradient(90deg,rgba(17,16,15,.9),rgba(25,22,20,.83)),url("assets/workshop-hero.webp")}}
