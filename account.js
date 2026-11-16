@@ -1,6 +1,7 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.57.0';
 const supabase=createClient('https://stkhsfxtmeeiepxnzgym.supabase.co','sb_publishable_FKxLA2wuSeEauCYWFx3vJA_mjJ7Az6X');
-const $=id=>document.getElementById(id);let mode='login',currentUser=null,recovery=false;\nconst returnHome=new URLSearchParams(location.search).get('return')==='home';
+const $=id=>document.getElementById(id);let mode='login',currentUser=null,recovery=false;
+const returnHome=new URLSearchParams(location.search).get('return')==='home';
 function notice(message,error=false){const el=$('notice');el.textContent=message;el.hidden=false;el.classList.toggle('error',error);}
 function setMode(next){mode=next;document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));$('nameField').hidden=mode!=='signup';$('passwordField').hidden=mode==='reset';$('passwordField').querySelector('input').required=mode!=='reset';$('passwordField').querySelector('input').autocomplete=mode==='signup'?'new-password':'current-password';$('authSubmit').textContent=mode==='signup'?'CREATE ACCOUNT':mode==='reset'?'SEND RESET EMAIL':'LOG IN';$('authForm').reset();}
 document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
