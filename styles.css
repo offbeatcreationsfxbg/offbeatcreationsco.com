@@ -17,3 +17,77 @@
 .hero-inner{grid-template-columns:minmax(0,43%) minmax(0,57%);gap:20px;}
 @media(max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-logo img{width:min(80%,390px);}}
 @media(max-width:650px){.hero-logo img{width:min(86%,320px)}.nav-logo{width:68px;height:58px}.hero-inner{gap:6px}}
+
+
+/* Inclusive storefront redesign — public pages only; admin workflows retain original styling. */
+body.offbeat-public{--bg:#f8f5f0;--panel:#fffdf9;--cream:#302a28;--orange:#b75c35;--muted:#746b65;background:#f8f5f0;color:#302a28;font-family:Inter,Arial,sans-serif}
+.offbeat-public h1,.offbeat-public h2,.offbeat-public h3,.offbeat-public nav,.offbeat-public .btn,.offbeat-public .eyebrow{font-family:Inter,Arial,sans-serif;letter-spacing:-.035em}
+.offbeat-public h1,.offbeat-public h2{font-weight:750}
+.offbeat-public .top{background:rgba(255,253,249,.97);border-bottom:1px solid #e8ded4;box-shadow:0 2px 15px #382d2410}
+.offbeat-public .top nav a{color:#40352e;font:600 13px/1.4 Inter,Arial,sans-serif;letter-spacing:.015em;text-transform:none}
+.offbeat-public .top nav a:hover{color:#a95030}
+.offbeat-public .menu{color:#40352e}
+.offbeat-public .eyebrow{font:700 12px/1.4 Inter,Arial,sans-serif;letter-spacing:.17em;color:#a75336}
+.offbeat-public .btn{background:#ae573a;color:white;border-radius:30px;box-shadow:none;font:700 14px/1.4 Inter,Arial,sans-serif;letter-spacing:.01em;padding:15px 24px;gap:12px}
+.offbeat-public .btn:hover{background:#8f422b}
+.offbeat-home .hero{background:radial-gradient(circle at 10% 20%,#f5dfcf 0,transparent 42%),linear-gradient(125deg,#f8f2ea,#e9ded1);min-height:570px}
+.offbeat-home .hero:before{display:none}
+.offbeat-home .hero-inner{min-height:570px;grid-template-columns:minmax(0,42%) minmax(0,58%);padding-top:55px;padding-bottom:55px}
+.offbeat-home .hero-logo{background:radial-gradient(circle,#fdf8f2 10%,#f1e4d7 60%,transparent 73%);border-radius:50%;padding:22px}
+.offbeat-home .hero-logo img{width:min(100%,370px);filter:drop-shadow(0 12px 15px #3d251e24)}
+.offbeat-home .hero-copy{text-shadow:none}
+.offbeat-home .hero h1{color:#3a2d28;font-size:clamp(42px,5vw,76px);line-height:1.09;letter-spacing:-.06em;text-shadow:none;margin-bottom:22px}
+.offbeat-home .hero h1 em,.offbeat-home .about em{color:#b45e42;font-style:normal}
+.offbeat-home .hero-sub{font:400 17px/1.85 Inter,Arial,sans-serif;color:#655850;max-width:520px}
+.offbeat-home .hero-copy a:not(.btn){color:#7e4635!important;text-decoration-color:#c9a998!important;font:600 14px Inter,Arial,sans-serif}
+.offbeat-home .products,.offbeat-home .gallery{background:#fffdf9;padding-top:90px;padding-bottom:90px}
+.offbeat-home .section-head h2,.offbeat-home .custom h2,.offbeat-home .gallery h2,.offbeat-home .about h2,.offbeat-home .contact h2{font-size:clamp(32px,3.8vw,52px);line-height:1.15;letter-spacing:-.045em}
+.offbeat-home .section-head p:not(.eyebrow){color:#766b64;font-size:16px}
+.offbeat-home .product-grid{gap:20px}
+.offbeat-home .product{background:#f9f4ee;border:1px solid #e9ddd1;border-radius:20px;text-align:left;min-height:235px;padding:28px;box-shadow:0 10px 28px #4a31230a}
+.offbeat-home .product:hover{border-color:#bf927b;box-shadow:0 14px 35px #4a31231c}
+.offbeat-home .product .symbol{height:68px;font-size:39px}
+.offbeat-home .product h3{font:700 19px/1.35 Inter,Arial,sans-serif;letter-spacing:-.02em;color:#3a302c}
+.offbeat-home .product p{color:#746b65;font-size:14px}
+.offbeat-home .custom{background:#eee5db;gap:55px}
+.offbeat-home .custom-intro>p:not(.eyebrow){color:#665950}
+.offbeat-home .steps{font:600 16px/1.6 Inter,Arial,sans-serif;color:#54443d;gap:18px}
+.offbeat-home .quote-form{background:#fffdfa;border:1px solid #e4d6c9;border-radius:20px;box-shadow:0 14px 40px #3b251314}
+.offbeat-home .quote-form label{color:#423932}
+.offbeat-home .quote-form input,.offbeat-home .quote-form select,.offbeat-home .quote-form textarea{background:#faf8f5;color:#312924;border:1px solid #d8cbbf;border-radius:9px}
+.offbeat-home .form-note{color:#81766e}
+.offbeat-home .gallery{background:#f8f5f0}
+.offbeat-home .gallery-placeholder{background:linear-gradient(145deg,#f4e9dd,#e7d6c7);border:1px solid #dfcbb9;border-radius:18px;color:#654c3e;font:700 18px Inter,Arial,sans-serif;letter-spacing:0}
+.offbeat-home .gallery-placeholder small{color:#7d7068}
+.offbeat-home .about{background:#fffdfa;color:#352d28}
+.offbeat-home .contact{background:#e9dfd3;color:#352d28}
+.offbeat-home .contact p:not(.eyebrow){color:#6c6059}
+.offbeat-public footer{background:#302924;color:#f1e8e0}
+.offbeat-public footer strong{color:#f0b69c}
+.offbeat-public .category-main,.offbeat-public .catalog-wrap{color:#352d28}
+.offbeat-public .category-card{background:#fffdfa;border:1px solid #e2d6ca;border-radius:20px;box-shadow:0 12px 35px #37261c0c}
+.offbeat-public .category-card:hover{border-color:#bb876c}
+.offbeat-public .category-card h2{font:700 clamp(22px,2.4vw,31px)/1.25 Inter,Arial,sans-serif}
+.offbeat-public .category-card p,.offbeat-public .intro{color:#75675e}
+.offbeat-public .category-action{font:700 14px Inter,Arial,sans-serif;color:#a14c32}
+.offbeat-public .category-note{background:#f1e6da;color:#4c4039;border-left-color:#b45e42;border-radius:0 12px 12px 0}
+.offbeat-public .category-nav a{font:600 14px Inter,Arial,sans-serif;color:#40352e}
+.offbeat-public .catalog-wrap h1{font:750 clamp(34px,5vw,60px)/1.1 Inter,Arial,sans-serif;letter-spacing:-.05em}
+.offbeat-public .category-buttons button{background:#fffdfa;border:1px solid #e0d4c8;color:#3c332d;border-radius:14px;font:650 16px Inter,Arial,sans-serif}
+.offbeat-public .category-buttons button:hover,.offbeat-public .category-buttons button[aria-pressed="true"]{background:#f3e2d5;border-color:#b56c4b}
+.offbeat-public .category-buttons small{color:#756b64}
+.offbeat-public .product-tile,.offbeat-public .product-preview{background:#fffdfa;border:1px solid #e2d7ca;color:#3b302b;border-radius:16px}
+.offbeat-public .product-tile-button{color:#3b302b}
+.offbeat-public .tile-media,.offbeat-public .shirt-visual{background:#f2ece5;border-color:#e3d7c9}
+.offbeat-public .tile-price,.offbeat-public .preview-price{color:#a14f32}
+.offbeat-public .tile-view{color:#9b4c32}
+.offbeat-public .product-dialog{background:#fffdfa;color:#3b302b;border-color:#d9c4b3}
+.offbeat-public .product-dialog::backdrop{background:#201b18ad}
+.offbeat-public .dialog-close{background:#f3eae2;color:#4d3d35;border-color:#d7c6b7}
+.offbeat-public .product-description{color:#544941}
+.offbeat-public .product-description h3{color:#332923}
+.offbeat-public .muted-note{color:#73665e}
+.offbeat-public .catalog-banner{background:#f1e6da;border-color:#d9b49e;color:#694b3a}
+.offbeat-public .product-preview input,.offbeat-public .product-preview select,.offbeat-public .delivery-fields input{background:#fbf9f6;color:#312924;border-color:#d8cbbf}
+@media(max-width:900px){.offbeat-home .hero-inner{grid-template-columns:1fr;min-height:0}.offbeat-home .hero-logo img{width:min(65%,280px)}}
+@media(max-width:650px){.offbeat-public .top nav{background:#fffdfa;border-bottom:1px solid #e8ded4}.offbeat-home .hero-inner{padding:32px 5% 55px}.offbeat-home .hero h1{font-size:43px}.offbeat-home .hero-logo{padding:0}.offbeat-home .product{min-height:170px}.offbeat-home .products,.offbeat-home .gallery{padding-top:60px;padding-bottom:60px}}
